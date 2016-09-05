@@ -1,0 +1,9 @@
+
+all : space_walk
+
+space_walk: space_walk.c GL_utilities.c 
+	gcc -std=c99 -o space_walk  -DGL_GLEXT_PROTOTYPES space_walk.c GL_utilities.c MicroGlutmac.m loadobj.c VectorUtils3.c -framework OpenGL -framework Cocoa -framework GLUT
+
+clean :
+	rm  space_walk
+
